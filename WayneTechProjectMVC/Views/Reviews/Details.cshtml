@@ -1,0 +1,64 @@
+﻿@model WayneTechProjectMVC.Models.Reviews
+
+@{
+    ViewBag.Title = "Details";
+}
+
+@{
+    var IMG = Model.Img;
+    //var imgSrc = String.Format("data:image/gif;base64,{0}", IMG);
+}
+
+@*Here was my biggest attempt and main work done trying to get images displayed based off of me storing the image path as a string
+    and now trying to output that for each specific item. Which in my mind makes sense, I even tried taking that value from the 
+    DB and storing it in a local var here, tried with and without double and single quoates, All of the above and no go. 
+    I cant the fault in my logic right now so just gonna move on for now and play around with some other things*@
+
+<!-- Page content -->
+
+<div>
+    <div>
+        @*<img src="@Url.Content(Model.Img)" alt="insert pic" style="width:100%">*@
+        @*<img src='@IMG' alt="baterang"; style="max-width:100px; max-height:100px;" />*@
+        <h2>@Html.DisplayFor(model => model.Title)</h2>
+        <h6>@Html.DisplayFor(model => model.Category.Name)</h6>
+        <div class="jumbotron .darkText">
+            <h1 class="danger">**Insert Picture of @Html.DisplayFor(model => model.Title) here**</h1>
+        </div>
+    </div>
+
+    @*<img src=”@Url.Content(Model.Img)” />*@
+    @*<h6>@Html.DisplayFor(model => model.Img)</h6>*@
+
+    <hr />
+    <dl class="dl-horizontal">
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Rating)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Rating)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Content)
+        </dt>
+
+        <dd class="batmanWriting">
+            @Html.DisplayFor(model => model.Content)
+        </dd>
+
+
+        @*<dd>
+                @Html.DisplayFor(model => model.Img)
+            </dd>*@
+        <dd>
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,106 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background-color: black;
+    color: white;
+    font-family: 'Merriweather Sans', sans-serif
+    /*google fonts I can use
+    font-family: 'Shadows Into Light', cursive;
+    font-family: 'Righteous', cursive;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-family: 'Fira Sans', sans-serif;*/
+}
+
+/*custom class for hand writing font*/
+.batmanWriting {
+    font-family: 'Shadows Into Light', cursive;
+}
+
+.wayneTechBG {
+    /*  example below
+        background: url('file:///C:/Users/userid/desktop/f/pic.jpg') no-repeat center center fixed;*/
+    background-image: url('LogoWaynetech.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%; 
+    overflow: hidden;
+    /*working
+    background-image: url(https://upload.wikimedia.org/wikipedia/en/a/a5/Wayne-Tower-DC.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50% */
+}
+
+.superFill {
+    /*height: 300px;
+    float: left;
+        width: 240px;*/
+    background-color: red;
+    overflow: hidden;
+    margin: 20px;
+}
+.reviewHome{
+    background-color:black;
+    color:white;
+    border-color:white;
+    border:dashed;
+}
+
+.darkText {
+    color: black;
+}
+
+.maxPicBanner {
+    max-height: 300px;
+    max-width: 500px;
+    resize: both;
+}
+
+    .superFill img {
+        display: block;
+    }
+
+.portrait img {
+    width: 100%;
+}
+
+.landscape img {
+    height: 100%;
+}
+
+
+.reviewsDetailsBG{
+    background-image:url()
+}
+/*Fullsize background img*/
+.bgimg{
+    /*background-image: url('../Views/Reviews/Images/15990833_medium.gif');*/
+    min-height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+/*change font for all headers*/
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Fira Sans', sans-serif;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}

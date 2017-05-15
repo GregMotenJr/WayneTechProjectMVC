@@ -1,0 +1,36 @@
+﻿@model IEnumerable<WayneTechProjectMVC.Models.Reviews>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<!-- Page content -->
+
+<h2>Reviews</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+@*For each loop to display all the reviews*@
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-sm-6 col-md-4" style="height:375px; width:270px;" >
+            <div class="thumbnail reviewHome">
+                <div class="caption text-center">
+                    <div class="reviewHome">
+                        <h3>@Html.DisplayFor(modelItem => item.Title)</h3>
+                        <p>@Html.DisplayFor(modelItem => item.Category.Name)</p>                        
+                        <p>@Html.DisplayFor(modelItem => item.Rating)</p>
+                        <div class="batmanWriting"><p>@Html.DisplayFor(modelItem => item.Content)</p></div>
+                        @*<img src="@Url.Action(item.Img)"/>*@
+                        <p class="text-danger text-center">**Display Picture of @Html.DisplayFor(model => item.Title) here**</p>
+                        <p>@Html.ActionLink("Details", "Details", new { id = item.ID }, new { role = "button", @class = "btn btn-primary" })</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>@*End Index*@
